@@ -20,5 +20,5 @@ git clone https://github.com/sinlov-nushell/nu-completions.git
 ### git-completions
 
 ```nu
-echo "\n\n# git-completions\nsource ~/.config/nushell/custom-completions/nu-completions" | save -a $nu.config-path
+echo "\n\n# git-completions\nsource ~/.config/nushell/custom-completions/nu-completions/git/git-completions.nu" | save -a $nu.config-path
 ```
