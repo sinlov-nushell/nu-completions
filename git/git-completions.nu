@@ -419,18 +419,32 @@ export extern "git help" [
   command: string@"nu-complete git subcommands"       # subcommand to show help for
 ]
 
+
 ## alias git
 alias gst = git status
 alias ga = git add
 alias gaa = git add --all
 alias gpl = git pull
+alias grhh = git reset --hard
+alias grshb = git reset --soft HEAD^
 alias gbv = git branch -v
 alias gcdfx = git clean -d -f -x
 alias grshb = git reset --soft HEAD^
-alias gsl = git status ; git --no-pager log --pretty=reference -1
+def 'gsl' [] {
+  git status
+  git --no-pager log --pretty=reference -1
+}
 alias glr = git --no-pager log --pretty=reference -1
 alias gll = git --no-pager log --decorate -1
-alias gfost = git fetch origin ; git --no-pager log --oneline --decorate -1 ; git status
+def 'gfost' [] {
+  git fetch origin
+  git --no-pager log --oneline --decorate -1
+  git status
+}
 alias glos = git --no-pager log --oneline --decorate -1
 alias gloo = git --no-pager log --pretty=oneline -1
 alias glrm = git pull --rebase origin (git_main_branch)
+def 'gbta' [] {
+  let brachInfo = (git branch -r | lines | where $it !~ -> | each { |rbn| (echo $"($rbn | str replace 'origin/' ''| str trim )" $rbn | str trim) })
+  $brachInfo | each { |bi| git branch --track $bi.0 $bi.1 }
+}
