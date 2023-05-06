@@ -15,7 +15,11 @@ mkdir ~/.config/nushell/custom-completions && cd ~/.config/nushell/custom-comple
 git clone https://github.com/sinlov-nushell/nu-completions.git
 ```
 
-- at nushell to config
+- update
+
+```bash
+cd ~/.config/nushell/custom-completions/nu-completions ; git pull
+```
 
 ### git-completions
 
