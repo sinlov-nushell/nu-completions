@@ -4,14 +4,15 @@
 
 ## notics
 
-please install [https://www.nushell.sh](https://www.nushell.sh) then use
+- please install [https://www.nushell.sh](https://www.nushell.sh) then use
+- all usage use context at `nu`
 
 ## usage
 
 - install
 
 ```bash
-mkdir ~/.config/nushell/custom-completions && cd ~/.config/nushell/custom-completions
+mkdir ~/.config/nushell/custom-completions ; cd ~/.config/nushell/custom-completions
 git clone https://github.com/sinlov-nushell/nu-completions.git
 ```
 
@@ -24,5 +25,22 @@ cd ~/.config/nushell/custom-completions/nu-completions ; git pull
 ### git-completions
 
 ```nu
-echo "\n\n# git-completions\nsource ~/.config/nushell/custom-completions/nu-completions/git/git-completions.nu" | save -a $nu.config-path
+echo "\n# git-completions\nsource ~/.config/nushell/custom-completions/nu-completions/git/git-completions.nu" | save -a $nu.config-path
+```
+
+### make-completions
+
+```nu
+echo "\n# make-completions\nsource ~/.config/nushell/custom-completions/nu-completions/make/make-completions.nu" | save -a $nu.config-path
+```
+
+### docker-completions
+
+```nu
+```
+
+### npm-completions
+
+```nu
+echo "\n# make-completions\nsource ~/.config/nushell/custom-completions/nu-completions/npm/npm-completions.nu" | save -a $nu.config-path
 ```
