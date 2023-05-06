@@ -115,3 +115,4 @@ alias dkcpdown = docker-compose down
 alias dkcpstart = docker-compose start
 alias dkcpstop = docker-compose stop
 alias dfimage = docker run -v /var/run/docker.sock:/var/run/docker.sock --rm alpine/dfimage:1.1
+alias dkdive = docker run -v /var/run/docker.sock:/var/run/docker.sock --rm -it wagoodman/dive:latest
