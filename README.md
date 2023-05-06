@@ -9,14 +9,14 @@
 
 ## usage
 
-- install
+- install pluings [https://github.com/sinlov-nushell/nu-completions](https://github.com/sinlov-nushell/nu-completions)
 
 ```bash
 mkdir ~/.config/nushell/custom-completions ; cd ~/.config/nushell/custom-completions
 git clone https://github.com/sinlov-nushell/nu-completions.git
 ```
 
-- update
+- update pluings
 
 ```bash
 cd ~/.config/nushell/custom-completions/nu-completions ; git pull
@@ -43,5 +43,11 @@ echo "\n# docker-completions\nsource ~/.config/nushell/custom-completions/nu-com
 ### npm-completions
 
 ```nu
-echo "\n# make-completions\nsource ~/.config/nushell/custom-completions/nu-completions/npm/npm-completions.nu" | save -a $nu.config-path
+echo "\n# npm-completions\nsource ~/.config/nushell/custom-completions/nu-completions/npm/npm-completions.nu" | save -a $nu.config-path
+```
+
+### cargo-completions
+
+```nu
+echo "\n# cargo-completions\nsource ~/.config/nushell/custom-completions/nu-completions/cargo/cargo-completions.nu" | save -a $nu.config-path
 ```
