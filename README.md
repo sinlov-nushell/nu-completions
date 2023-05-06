@@ -37,6 +37,7 @@ echo "\n# make-completions\nsource ~/.config/nushell/custom-completions/nu-compl
 ### docker-completions
 
 ```nu
+echo "\n# docker-completions\nsource ~/.config/nushell/custom-completions/nu-completions/docker/docker-completions.nu" | save -a $nu.config-path
 ```
 
 ### npm-completions
